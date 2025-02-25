@@ -5,76 +5,104 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>China's Birthday</title>
     <style>
-        @import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Inter+Tight:ital,wght@0,100..900;1,100..900&family=Old+Standard+TT:ital,wght@0,400;0,700;1,400&family=Onest:wght@100..900&family=Wix+Madefor+Display:wght@400..800&display=swap');
+      @import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Inter+Tight:ital,wght@0,100..900;1,100..900&family=Old+Standard+TT:ital,wght@0,400;0,700;1,400&family=Onest:wght@100..900&family=Wix+Madefor+Display:wght@400..800&display=swap');
+      @import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Inter+Tight:ital,wght@0,100..900;1,100..900&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Old+Standard+TT:ital,wght@0,400;0,700;1,400&family=Onest:wght@100..900&family=Wix+Madefor+Display:wght@400..800&display=swap');
         
-        body {
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        html, body {
+            height: 100%;
             font-family: "Old Standard TT", serif;
             text-align: center;
-            color:  #0B063A;
+            color: #0B063A;
             display: flex;
-            height: 100vh;
             flex-direction: column;
-            justify-content: center;
             align-items: center;
-            background-image: url('background2.jpg');
+            justify-content: center;
+            background-image: url('img/background2.jpg');
             background-repeat: no-repeat;
             background-attachment: fixed;
             background-size: cover;
             background-position: center;
-            margin: 0;
-            padding: 0;
+            overflow: hidden;
         }
+
         .container {
             display: flex;
+            padding: 24px;
             flex-direction: column;
             justify-content: space-between;
-            padding: 24px;
-            max-width: 390px; /* Ancho típico del iPhone 14/14 Pro */
-            width: 100%;
             height: 100vh;
+            width: 100vw;
+            max-width: 430px;
+            max-height: 932px;
         }
+
+        .text {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            gap: 16px;
+            flex: 1;
+        }
+
         h1 {
             font-size: 64px;
             font-weight: 700;
             letter-spacing: -2.36px;
-            margin: 0;
         }
-        h3, h2, p {
-            margin: 0;
-        }
-        h3 {
+
+        h3, p {
             font-size: 24px;
             font-weight: 400;
         }
+
         h2 {
             font-size: 56px;
             font-weight: 400;
         }
-        p {
-            font-size: 24px;
+
+        .date {
+            display: flex;
+            flex-direction: column;
+            gap: 8px;
         }
-        .buttons, .maps {
+
+        .buttons {
             display: flex;
             flex-direction: column;
             gap: 8px;
             width: 100%;
         }
+
+        .maps {
+            display: flex;
+            gap: 8px;
+        }
+
         a {
-            font-family: 'Inter', sans-serif;
-            height: 48px;
             display: flex;
             justify-content: center;
             align-items: center;
+            height: 48px;
+            padding: 8px 0;
+            font-family: 'Inter', sans-serif;
+            font-size: 18px;
             text-decoration: none;
-            border-radius: 100px;
-            background: rgba(255, 255, 255, 0.90);
-            backdrop-filter: blur(2px);
             color: #0B063A;
+            background: transparent;
+            border: 2px solid rgba(255, 255, 255, 0.9);
+            border-radius: 100px;
         }
+
         a:hover {
-            background-color: #030317;
-            color: white;
+            text-decoration: underline;
         }
+
         audio {
             display: none;
         }
@@ -83,10 +111,16 @@
 <body>
     <div class="container">
         <a href="#" id="play-music">Press for Music & Magic!</a>
-        <h1>CHINA IS 28</h1>
-        <h3>Sat, March 29th</h3>
-        <h3>11:00 PM</h3>
-        <h2>Here we go again...</h2>
+
+        <div class="text">
+            <h1>CHINA IS 28</h1>
+            <div class="date">
+                <h3>Sat, March 29th</h3>
+                <h3>11:00 PM</h3>
+            </div>
+            <h2>Here we go again...</h2>
+        </div>
+
         <div class="buttons">
             <a href="date.ics" download="ChinasBirthday.ics">Add to Calendar</a>
             <div class="maps">
@@ -95,6 +129,7 @@
             </div>
             <p>Peru 979, Acassuso.</p>
         </div>
+
         <audio id="birthday-audio" loop>
             <source src="ABBA.mp3" type="audio/mpeg">
             Your browser does not support the audio element.
