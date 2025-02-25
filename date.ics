@@ -1,0 +1,13 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//China's Birthday//EN
+BEGIN:VEVENT
+UID:chinas-birthday-2025@example.com
+DTSTAMP:20250223T181919Z
+DTSTART:20250329T230000
+DTEND:20250330T050000
+SUMMARY:China's Birthday
+LOCATION:Perú 979, B1641 Acassuso, Provincia de Buenos Aires
+DESCRIPTION:¡Hola amigos!\nLos invito a festejar mi cumple con más ritmo que un musical. Buena música, drinks y mucha onda.\nVengan con ganas de pasarla genial. ¡Nos vemos ahí! ✨
+END:VEVENT
+END:VCALENDAR

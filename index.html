@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>China's Birthday</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Inter+Tight:ital,wght@0,100..900;1,100..900&family=Old+Standard+TT:ital,wght@0,400;0,700;1,400&family=Onest:wght@100..900&family=Wix+Madefor+Display:wght@400..800&display=swap');
+        
+        body {
+            font-family: "Old Standard TT", serif;
+            text-align: center;
+            color:  #0B063A;
+            display: flex;
+            height: 100vh;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            background-image: url('background2.jpg');
+            background-repeat: no-repeat;
+            background-attachment: fixed;
+            background-size: cover;
+            background-position: center;
+            margin: 0;
+            padding: 0;
+        }
+        .container {
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            padding: 24px;
+            max-width: 390px; /* Ancho típico del iPhone 14/14 Pro */
+            width: 100%;
+            height: 100vh;
+        }
+        h1 {
+            font-size: 64px;
+            font-weight: 700;
+            letter-spacing: -2.36px;
+            margin: 0;
+        }
+        h3, h2, p {
+            margin: 0;
+        }
+        h3 {
+            font-size: 24px;
+            font-weight: 400;
+        }
+        h2 {
+            font-size: 56px;
+            font-weight: 400;
+        }
+        p {
+            font-size: 24px;
+        }
+        .buttons, .maps {
+            display: flex;
+            flex-direction: column;
+            gap: 8px;
+            width: 100%;
+        }
+        a {
+            font-family: 'Inter', sans-serif;
+            height: 48px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            text-decoration: none;
+            border-radius: 100px;
+            background: rgba(255, 255, 255, 0.90);
+            backdrop-filter: blur(2px);
+            color: #0B063A;
+        }
+        a:hover {
+            background-color: #030317;
+            color: white;
+        }
+        audio {
+            display: none;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <a href="#" id="play-music">Press for Music & Magic!</a>
+        <h1>CHINA IS 28</h1>
+        <h3>Sat, March 29th</h3>
+        <h3>11:00 PM</h3>
+        <h2>Here we go again...</h2>
+        <div class="buttons">
+            <a href="date.ics" download="ChinasBirthday.ics">Add to Calendar</a>
+            <div class="maps">
+                <a href="https://maps.apple.com/?q=Per%C3%BA%20979,%20B1641%20Acassuso,%20Provincia%20de%20Buenos%20Aires" target="_blank">Apple Maps</a>
+                <a href="https://maps.google.com/?q=Per%C3%BA%20979,%20B1641%20Acassuso,%20Provincia%20de%20Buenos%20Aires" target="_blank">Google Maps</a>
+            </div>
+            <p>Peru 979, Acassuso.</p>
+        </div>
+        <audio id="birthday-audio" loop>
+            <source src="ABBA.mp3" type="audio/mpeg">
+            Your browser does not support the audio element.
+        </audio>
+    </div>
+
+    <script>
+        document.getElementById('play-music').addEventListener('click', function() {
+            const audio = document.getElementById('birthday-audio');
+            audio.play().catch(error => console.log('Autoplay blocked:', error));
+        });
+    </script>
+</body>
+</html>
